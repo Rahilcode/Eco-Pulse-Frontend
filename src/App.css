@@ -1,0 +1,168 @@
+.home-container {
+  height: 89vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading h1 {
+  margin: 1rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.button-green {
+  background-color: #8bc349 !important;
+  border-radius: 8px;
+  transition: all;
+}
+
+.button-green:hover {
+  color: #8bc349 !important;
+  background-color: rgb(21, 20, 20) !important;
+  transform: scale(1.1);
+}
+
+.button-purple {
+  background-color: #0112a9 !important;
+  padding: 1px 5px;
+  transition: all;
+}
+
+.button-purple:hover {
+  transform: scale(1.1);
+}
+
+.button-group {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.button-group button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.jumbo {
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://images.pexels.com/photos/414805/pexels-photo-414805.jpeg?auto=compress&cs=tinysrgb&")
+      no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-container {
+}
+
+.expired-card {
+  background-color: lightgray !important;
+}
+
+.card-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.para-justify {
+  padding: 0.2rem;
+  margin: 0.3rem;
+  text-align: justify;
+}
+
+.nav-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.nav-div ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav-ul li a:hover {
+  color: #61b403 !important;
+}
+
+.nav-link:hover {
+  color: red !important;
+}
+
+.profile-secondary-text {
+  color: #464646;
+}
+
+.post_img {
+  width: 215px;
+}
+
+.price-tag {
+  color: #16b403 !important;
+}
+
+.rate-btn {
+  font-size: 10px;
+  border: none;
+}
+
+/* .service-type {
+  font-family: "Times New Roman", Times, serif;
+} */
+
+@media only screen and (max-width: 995px) {
+  .home-img-container {
+    width: 300px;
+    height: 300px;
+  }
+  .home-container {
+    text-align: -webkit-center;
+  }
+  .home-heading {
+    font-size: 1rem;
+  }
+  .post-contact-detail {
+    display: contents;
+  }
+  .image-container,
+  .edit-img-container {
+    display: none;
+  }
+
+  .login-container,
+  .register-container {
+    margin-top: 2rem !important;
+    margin-left: 8rem;
+  }
+
+  .login-body,
+  .register-body {
+    height: 100vh;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .home-img-container img {
+    width: 250px;
+    height: 250px;
+  }
+  .home-heading {
+    font-size: 0.7rem;
+  }
+  .register-container {
+    margin-left: 5rem;
+  }
+  .login-container {
+    margin-top: 2rem !important;
+    margin-left: 4rem;
+  }
+}
