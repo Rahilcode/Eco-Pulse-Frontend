@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Pulse from "../images/Pulse.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [flag, setFlag] = useState(false);
   const handleClick = () => {
     setFlag(!flag);
   };
+
   return (
     <>
       <nav
@@ -13,9 +15,9 @@ const Navbar = () => {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a href="/" className="nav-img">
+          <Link to="/" className="nav-img">
             <img src={Pulse} alt="Logo" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -30,53 +32,56 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="nav-ul navbar-nav me-auto mb-2 mb-lg-0 ms-4">
               <li className="nav-item">
-                <a href="/about" className="nav-link active fw-bold">
+                <Link to="/about" className="nav-link active fw-bold">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="/services" className="nav-link active fw-bold">
+                <Link to="/services" className="nav-link active fw-bold">
                   Services
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="/posts" className="nav-link active fw-bold">
+                <Link to="/posts" className="nav-link active fw-bold">
                   Posts
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="nav-ul navbar-nav ms-4">
               <li className="nav-item me-2">
-                <a href="/notifications">
+                <Link to="/notifications">
                   <i className="fa-solid fa-bell position-relative fa-beat">
                     <i
                       className="fa-solid fa-bowling-ball position-absolute start-50 fa-2xs"
                       style={{ color: "#ff0000" }}
                     ></i>
                   </i>
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-2">
-                <a href="/user/profile" className="nav-link active fw-bold">
+                <Link to="/user/profile" className="nav-link active fw-bold">
                   Profile
-                </a>
+                </Link>
               </li>
               {flag ? (
                 <>
-                  <li class="nav-item">
-                    <a href="/register" className="nav-link active fw-bold">
+                  <li className="nav-item">
+                    <Link
+                      to="/user/register"
+                      className="nav-link active fw-bold"
+                    >
                       Sign Up
-                    </a>
+                    </Link>
                   </li>
 
-                  <li class="nav-item">
-                    <a
-                      href="/register"
+                  <li className="nav-item">
+                    <Link
+                      to="/user/login"
                       onClick={handleClick}
                       className="nav-link active fw-bold"
                     >
                       Log In
-                    </a>
+                    </Link>
                   </li>
                 </>
               ) : (

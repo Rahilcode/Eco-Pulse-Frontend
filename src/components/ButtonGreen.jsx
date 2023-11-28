@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ButtonGreen = ({ btnText, link, addClass }) => {
   let classes = "btn button-green fw-bold ";
@@ -6,9 +7,9 @@ const ButtonGreen = ({ btnText, link, addClass }) => {
     classes += addClass;
   }
   return (
-    <a href={link} className={classes}>
+    <Link to={link} className={classes}>
       {btnText}
-    </a>
+    </Link>
   );
 };
 
