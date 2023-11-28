@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SpanLink from "../components/SpanLink";
 import Logo from "../components/Logo";
-import { redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const CompanyLogin = () => {

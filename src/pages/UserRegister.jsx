@@ -12,6 +12,7 @@ const UserRegister = () => {
     phone: "",
     address: "",
   });
+  const [show, setShow] = useState(false);
 
   const navigate = useNavigate();
 
@@ -35,7 +36,10 @@ const UserRegister = () => {
       formData.password === formData.cpassword
     ) {
       console.log(formData);
+      setShow(false);
       navigate("/about");
+    } else {
+      setShow(true);
     }
   };
 
@@ -43,6 +47,11 @@ const UserRegister = () => {
     <>
       <div className="container register-body my-3">
         <div className="row heading">
+          {show && (
+            <h5 className="text-danger">
+              Please Enter all the details correctly
+            </h5>
+          )}
           <div className="col register-container">
             <h2 className="fw-bold mb-4">User Register</h2>
 
