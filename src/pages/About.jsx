@@ -1,10 +1,12 @@
 import React from "react";
 import Card from "../components/Card";
 import { platformData } from "../constants/platformHighlights";
+import Navbar from "../components/Navbar";
 
 const About = () => {
   return (
     <>
+      <Navbar />
       <div className="p-5 mb-4 bg-body-tertiary jumbo">
         <div className="container-fluid py-5 text-center">
           <h1 className="display-5 fw-bold ">ECO PULSE</h1>

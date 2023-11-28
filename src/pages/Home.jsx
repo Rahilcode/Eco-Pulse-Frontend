@@ -10,8 +10,8 @@ const Home = () => {
           <div className="col">
             <h1 className="home-heading">How do you want to use Eco Pulse?</h1>
             <div className="d-grid gap-2 col-6 button-group">
-              <ButtonGreen btnText="User" />
-              <ButtonGreen btnText="Agency/Company" />
+              <ButtonGreen btnText="User" link="/user/login" />
+              <ButtonGreen btnText="Agency/Company" link="/company/login" />
             </div>
           </div>
           <div className="col home-img-container">
