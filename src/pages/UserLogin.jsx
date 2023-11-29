@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import SpanLink from "../components/SpanLink";
 import Logo from "../components/Logo";
-import { redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Users } from "../Data/users";
 
 const UserLogin = () => {
   const [email, setEmail] = useState("");
@@ -13,8 +13,13 @@ const UserLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
-      console.log(email, password);
-      navigate("/about");
+      let user = Users.find((user) => user.email === email);
+      if (user && user.password === password) {
+        console.log(email, password);
+        navigate("/about");
+      } else {
+        alert("Invalid Credentials");
+      }
     }
   };
   return (

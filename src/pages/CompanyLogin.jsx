@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SpanLink from "../components/SpanLink";
 import Logo from "../components/Logo";
 import { useNavigate } from "react-router-dom";
+import { Companies } from "../Data/companies";
 
 const CompanyLogin = () => {
   const [email, setEmail] = useState("");
@@ -12,8 +13,14 @@ const CompanyLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
-      console.log(email, password);
-      navigate("/about");
+      let company = Companies.find((company) => company.email === email);
+      console.log(company);
+      if (company && company.password === password) {
+        console.log(email, password);
+        navigate("/about");
+      } else {
+        alert("Invalid Credentials");
+      }
     }
   };
 

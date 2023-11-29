@@ -1,0 +1,38 @@
+export const Companies = [
+  {
+    name: "company1",
+    email: "company1@some.com",
+    password: "password",
+    phone: "1234567890",
+    address: "Bangalore",
+    city: "Bangalore",
+    description: "some company1 description",
+  },
+  {
+    name: "company2",
+    email: "company2@some.com",
+    password: "password",
+    phone: "1234567890",
+    address: "company2 address",
+    city: "Bangalore",
+    description: "company2 description",
+  },
+  {
+    name: "company3",
+    email: "company3@some.com",
+    password: "password",
+    phone: "1234567890",
+    address: "Bangalore",
+    city: "Bangalore",
+    description: "",
+  },
+  {
+    name: "company4",
+    email: "company4@some.com",
+    password: "password",
+    phone: "1234567890",
+    address: "Bangalore",
+    city: "Bangalore",
+    description: "",
+  },
+];

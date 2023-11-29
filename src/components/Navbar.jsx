@@ -48,14 +48,9 @@ const Navbar = () => {
               </li>
             </ul>
             <ul className="nav-ul navbar-nav ms-4">
-              <li className="nav-item me-2">
+              <li class="nav-item me-2 my-2">
                 <Link to="/notifications">
-                  <i className="fa-solid fa-bell position-relative fa-beat">
-                    <i
-                      className="fa-solid fa-bowling-ball position-absolute start-50 fa-2xs"
-                      style={{ color: "#ff0000" }}
-                    ></i>
-                  </i>
+                  <i class="fa-solid fa-bell" style={{ color: "#ffffff" }}></i>
                 </Link>
               </li>
               <li className="nav-item me-2">

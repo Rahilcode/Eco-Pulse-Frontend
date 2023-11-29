@@ -89,7 +89,8 @@
   align-items: flex-end;
 }
 
-.nav-ul li a:hover {
+.nav-ul li a:hover,
+.nav-ul li i:hover {
   color: #61b403 !important;
 }
 

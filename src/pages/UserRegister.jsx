@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../components/Logo";
 import SpanLink from "../components/SpanLink";
 import { useNavigate } from "react-router-dom";
+import { Users } from "../Data/users";
 
 const UserRegister = () => {
   const [formData, setFormData] = useState({
@@ -36,9 +37,18 @@ const UserRegister = () => {
       formData.password === formData.cpassword
     ) {
       console.log(formData);
-      setShow(false);
-      navigate("/about");
+      let user = Users.find((user) => user.email === formData.email);
+      if (user) {
+        alert("User already Exists");
+        setShow(true);
+      } else {
+        Users.push(formData);
+        console.log(Users);
+        setShow(false);
+        navigate("/about");
+      }
     } else {
+      alert("Please enter all the details correctly!");
       setShow(true);
     }
   };

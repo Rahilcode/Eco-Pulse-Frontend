@@ -6,6 +6,8 @@ import UserLogin from "./pages/UserLogin";
 import CompanyLogin from "./pages/CompanyLogin";
 import UserRegister from "./pages/UserRegister";
 import CompanyRegister from "./pages/CompanyRegister";
+import Profile from "./pages/Profile";
+import Notification from "./pages/Notification";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,18 @@ const router = createBrowserRouter([
   {
     path: "/company/register",
     element: <CompanyRegister />,
+  },
+  {
+    path: "/user/profile",
+    element: <Profile />,
+  },
+  {
+    path: "/company/profile",
+    element: <Profile />,
+  },
+  {
+    path: "/notifications",
+    element: <Notification />,
   },
 ]);
 
