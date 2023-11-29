@@ -17,7 +17,7 @@ const CompanyLogin = () => {
       console.log(company);
       if (company && company.password === password) {
         console.log(email, password);
-        navigate("/about");
+        navigate("/company/about");
       } else {
         alert("Invalid Credentials");
       }

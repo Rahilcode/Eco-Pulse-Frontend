@@ -50,7 +50,7 @@ const CompanyRegister = () => {
         Companies.push(formData);
         console.log(Companies);
         setShow(false);
-        navigate("/about");
+        navigate("/company/about");
       }
     } else {
       alert("Please Enter all the details correctly!");

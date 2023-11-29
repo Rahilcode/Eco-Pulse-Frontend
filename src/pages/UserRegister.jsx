@@ -45,7 +45,7 @@ const UserRegister = () => {
         Users.push(formData);
         console.log(Users);
         setShow(false);
-        navigate("/about");
+        navigate("/user/about");
       }
     } else {
       alert("Please enter all the details correctly!");

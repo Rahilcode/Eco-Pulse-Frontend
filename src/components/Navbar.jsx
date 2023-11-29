@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import Pulse from "../images/Pulse.png";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [flag, setFlag] = useState(false);
   const handleClick = () => {
     setFlag(!flag);
   };
+
+  const location = useLocation();
+  let path = location.pathname.split("/")[1] === "company";
+  let company = "";
+  if (path) {
+    company = "/comapany";
+  }
 
   return (
     <>
@@ -32,17 +40,26 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="nav-ul navbar-nav me-auto mb-2 mb-lg-0 ms-4">
               <li className="nav-item">
-                <Link to="/about" className="nav-link active fw-bold">
+                <Link
+                  to={!company ? "/user/about" : "/company/about"}
+                  className="nav-link active fw-bold"
+                >
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/services" className="nav-link active fw-bold">
+                <Link
+                  to={company + "/services"}
+                  className="nav-link active fw-bold"
+                >
                   Services
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/posts" className="nav-link active fw-bold">
+                <Link
+                  to={company + "/posts"}
+                  className="nav-link active fw-bold"
+                >
                   Posts
                 </Link>
               </li>
@@ -57,7 +74,10 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item me-2">
-                <Link to="/user/profile" className="nav-link active fw-bold">
+                <Link
+                  to={!company ? "/user/profile" : "/company/profile"}
+                  className="nav-link active fw-bold"
+                >
                   Profile
                 </Link>
               </li>

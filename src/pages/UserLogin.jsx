@@ -16,7 +16,7 @@ const UserLogin = () => {
       let user = Users.find((user) => user.email === email);
       if (user && user.password === password) {
         console.log(email, password);
-        navigate("/about");
+        navigate("/user/about");
       } else {
         alert("Invalid Credentials");
       }
