@@ -1,10 +1,10 @@
 import React from "react";
 
-const CancelAccount = ({ navigate }) => {
+const CancelAccount = ({ navigate, link }) => {
   const handleCancelAccount = () => {
     const response = confirm("Are you sure you want to do that?");
     if (response) {
-      navigate("/about");
+      navigate(link);
     }
   };
 

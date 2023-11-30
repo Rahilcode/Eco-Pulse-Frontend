@@ -65,7 +65,7 @@ const Profile = () => {
             />
             <ButtonGreen
               btnText="Create Service"
-              link="/company/service/post"
+              link="/service/new"
               addClass="fs-4 mb-4 button-purple col-6 p-2 text-white"
             />
           </div>

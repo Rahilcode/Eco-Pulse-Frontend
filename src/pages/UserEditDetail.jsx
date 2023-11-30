@@ -146,7 +146,7 @@ const UserEditDetail = () => {
               </Link>
             </form>
 
-            <CancelAccount navigate={navigate} />
+            <CancelAccount navigate={navigate} link="/user/about" />
           </div>
           <div className="col m-2 edit-img-container">
             <img src={EditPage} alt="Edit Page Image" />
