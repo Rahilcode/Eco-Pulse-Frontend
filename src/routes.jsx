@@ -8,6 +8,9 @@ import UserRegister from "./pages/UserRegister";
 import CompanyRegister from "./pages/CompanyRegister";
 import Profile from "./pages/Profile";
 import Notification from "./pages/Notification";
+import UserEditDetail from "./pages/UserEditDetail";
+import CompanyEditDetail from "./pages/CompanyEditDetail";
+import Services from "./pages/Services";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +19,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/about",
+    path: "/user/about",
+    element: <About />,
+  },
+  {
+    path: "/company/about",
     element: <About />,
   },
   {
@@ -46,6 +53,22 @@ const router = createBrowserRouter([
   {
     path: "/notifications",
     element: <Notification />,
+  },
+  {
+    path: "/user/edit",
+    element: <UserEditDetail />,
+  },
+  {
+    path: "/company/edit",
+    element: <CompanyEditDetail />,
+  },
+  {
+    path: "/company/services",
+    element: <Services />,
+  },
+  {
+    path: "/services",
+    element: <Services />,
   },
 ]);
 

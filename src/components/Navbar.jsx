@@ -13,7 +13,7 @@ const Navbar = () => {
   let path = location.pathname.split("/")[1] === "company";
   let company = "";
   if (path) {
-    company = "/comapany";
+    company = "/company";
   }
 
   return (
