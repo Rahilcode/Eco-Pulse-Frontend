@@ -169,7 +169,7 @@ const UserEditDetail = () => {
               </Link>
             </form>
 
-            <CancelAccount navigate={navigate} />
+            <CancelAccount navigate={navigate} link="/company/about" />
           </div>
           <div className="col m-2 edit-img-container">
             <img src={CompanyInfo} alt="Edit Page Image" />

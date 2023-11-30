@@ -71,7 +71,7 @@ const ServiceCard = ({ service, flag, onDelete }) => {
               <div className="d-flex justify-content-between align-items-center">
                 <div>
                   <span className="visually-hidden">3</span>
-                  <div class="ms-5 col-md my-2 d-flex"></div>
+                  <div className="ms-5 col-md my-2 d-flex"></div>
                 </div>
                 {flag == "true" ? (
                   <div className="col col-2 my-2">
