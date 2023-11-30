@@ -3,14 +3,23 @@ import Aipersion from "../images/aiperson.avif";
 import ButtonGreen from "../components/ButtonGreen";
 import Navbar from "../components/Navbar";
 import { useLocation } from "react-router-dom";
-import { Services } from "../constants/services";
+import { ServicesData } from "../constants/services";
 import ServiceCard from "../components/ServiceCard";
 
 const Profile = () => {
-  const [services, setServices] = useState(Services);
+  const [services, setServices] = useState(ServicesData);
   const location = useLocation();
   let user = location.pathname.split("/")[1];
   let flag = user === "user";
+
+  const handleDelete = (id) => {
+    console.log(services);
+    console.log("delete", id);
+    let newservices = services.filter((service) => {
+      return service.id !== id;
+    });
+    setServices(newservices);
+  };
 
   return (
     <>
@@ -72,6 +81,7 @@ const Profile = () => {
                     key={service.id}
                     service={service}
                     flag={"false"}
+                    onDelete={handleDelete}
                   />
                 );
               })}
