@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Aipersion from "../images/aiperson.avif";
 import ButtonGreen from "../components/ButtonGreen";
 import Navbar from "../components/Navbar";
 import { useLocation } from "react-router-dom";
+import { Services } from "../constants/services";
+import ServiceCard from "../components/ServiceCard";
 
 const Profile = () => {
+  const [services, setServices] = useState(Services);
   const location = useLocation();
   let user = location.pathname.split("/")[1];
   let flag = user === "user";
@@ -56,6 +59,23 @@ const Profile = () => {
               link="/company/service/post"
               addClass="fs-4 mb-4 button-purple col-6 p-2 text-white"
             />
+          </div>
+        )}
+
+        {!flag && (
+          <div>
+            <h1 className="mb-4 fs-2"> Available Services </h1>
+            <div className="d-flex justify-content-center align-items-center flex-column">
+              {services.map((service, index) => {
+                return (
+                  <ServiceCard
+                    key={service.id}
+                    service={service}
+                    flag={"false"}
+                  />
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
