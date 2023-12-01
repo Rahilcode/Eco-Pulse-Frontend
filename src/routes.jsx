@@ -11,6 +11,7 @@ import Notification from "./pages/Notification";
 import UserEditDetail from "./pages/UserEditDetail";
 import CompanyEditDetail from "./pages/CompanyEditDetail";
 import Services from "./pages/Services";
+import ServiceForm from "./pages/ServiceForm";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,14 @@ const router = createBrowserRouter([
   {
     path: "/services",
     element: <Services />,
+  },
+  {
+    path: "/company/service/new",
+    element: <ServiceForm />,
+  },
+  {
+    path: "/company/service/edit",
+    element: <ServiceForm />,
   },
 ]);
 

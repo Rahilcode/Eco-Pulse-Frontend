@@ -7,10 +7,10 @@ const Notification = () => {
   return (
     <>
       <Navbar />
-      <div class="container my-2">
+      <div className="container my-2">
         <h1>Notifications</h1>
 
-        <ul class="list-unstyled">
+        <ul className="list-unstyled">
           {Notifications.map((notification) => {
             return (
               <Notify message={notification.message} date={notification.date} />

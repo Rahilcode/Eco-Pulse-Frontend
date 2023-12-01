@@ -9,7 +9,7 @@ export const ServicesData = [
     city: "Bangalore",
     type: "Electronics",
     ratings: 4,
-    price: "200",
+    price: 200,
     image: Eco,
   },
   {
@@ -19,7 +19,7 @@ export const ServicesData = [
     city: "Mumbai",
     type: "Bio Degradable",
     ratings: 3,
-    price: "500",
+    price: 500,
     image: About,
   },
   {
@@ -29,7 +29,7 @@ export const ServicesData = [
     city: "Chennai",
     type: "Electronics",
     ratings: 2,
-    price: "100",
+    price: 100,
     image: Ecco,
   },
 ];

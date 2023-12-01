@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Aipersion from "../images/aiperson.avif";
 import ButtonGreen from "../components/ButtonGreen";
 import Navbar from "../components/Navbar";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ServicesData } from "../constants/services";
 import ServiceCard from "../components/ServiceCard";
 
@@ -63,11 +63,12 @@ const Profile = () => {
               link="/company/edit"
               addClass="fs-4 mb-4 col-6 p-2"
             />
-            <ButtonGreen
-              btnText="Create Service"
-              link="/service/new"
-              addClass="fs-4 mb-4 button-purple col-6 p-2 text-white"
-            />
+            <Link
+              to="/company/service/new"
+              className="fs-4 btn button-purple text-light fw-bold mb-4 col-6 p-2"
+            >
+              Create Service
+            </Link>
           </div>
         )}
 
