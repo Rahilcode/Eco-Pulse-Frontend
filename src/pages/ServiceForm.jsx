@@ -139,10 +139,13 @@ const ServiceForm = () => {
                 <label
                   htmlFor="image"
                   className="w-100 h-50 d-flex align-items-center justify-content-center bg-light border-dark fw-bold"
-                ></label>
+                >
+                  Input Image
+                </label>
                 <input
                   type="file"
                   name="image"
+                  id="image"
                   className="fw-bold post_img bg-light border m-2 rounded"
                 />
               </div>
