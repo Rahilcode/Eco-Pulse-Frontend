@@ -22,6 +22,19 @@ const CreateService = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (
+      formData.title &&
+      formData.name &&
+      formData.price &&
+      formData.phone &&
+      formData.city &&
+      formData.material
+    ) {
+      console.log(formData);
+      navigate("/company/services");
+    } else {
+      alert("Please enter all the details correctly");
+    }
   };
 
   return (
