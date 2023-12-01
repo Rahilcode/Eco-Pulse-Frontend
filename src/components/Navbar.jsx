@@ -66,7 +66,7 @@ const Navbar = () => {
             </ul>
             <ul className="nav-ul navbar-nav ms-4">
               <li className="nav-item me-2 my-2">
-                <Link to="/notifications">
+                <Link to={company + "/notifications"}>
                   <i
                     className="fa-solid fa-bell"
                     style={{ color: "#ffffff" }}

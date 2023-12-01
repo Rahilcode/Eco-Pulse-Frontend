@@ -56,6 +56,10 @@ const router = createBrowserRouter([
     element: <Notification />,
   },
   {
+    path: "/company/notifications",
+    element: <Notification />,
+  },
+  {
     path: "/user/edit",
     element: <UserEditDetail />,
   },
