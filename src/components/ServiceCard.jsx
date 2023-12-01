@@ -9,7 +9,6 @@ const ServiceCard = ({ service, flag, onDelete }) => {
       newrate.push(i);
     }
     setRate(newrate);
-    console.log(rate);
   }, []);
 
   return (
@@ -85,7 +84,7 @@ const ServiceCard = ({ service, flag, onDelete }) => {
                 ) : (
                   <div className="col text-end me-1">
                     <Link
-                      to="/company/services/edit"
+                      to="/company/service/edit"
                       className="btn btn-warning fw-bold me-2"
                     >
                       Edit
