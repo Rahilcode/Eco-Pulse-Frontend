@@ -11,6 +11,7 @@ const Services = () => {
   const [loc, setLoc] = useState("");
   const [price, setPrice] = useState("");
   const [rating, setRating] = useState("");
+  const [services, setServices] = useState(ServicesData);
 
   const location = useLocation();
   let company = location.pathname.split("/")[1];
@@ -19,6 +20,48 @@ const Services = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     console.log(search, loc, price, rating);
+
+    let filteredArray = ServicesData;
+    if (search.trim()) {
+      let newSearch = search.toLowerCase().trim();
+      filteredArray = filteredArray.filter((service) => {
+        return service.title.toLowerCase().trim().includes(newSearch);
+      });
+    }
+
+    if (loc && loc != "all") {
+      filteredArray = filteredArray.filter((service) => {
+        return service.city.toLowerCase().trim().includes(loc);
+      });
+    }
+
+    if (price && price != "all") {
+      if (price == 0) {
+        filteredArray = filteredArray.filter((service) => {
+          return service.price >= 0 && service.price <= 99;
+        });
+      } else if (price == 1) {
+        filteredArray = filteredArray.filter((service) => {
+          return service.price >= 100 && service.price <= 299;
+        });
+      } else if (price == 2) {
+        filteredArray = filteredArray.filter((service) => {
+          return service.price >= 300 && service.price <= 599;
+        });
+      } else {
+        filteredArray = filteredArray.filter((service) => {
+          return service.price >= 600;
+        });
+      }
+    }
+
+    if (rating && rating != "all") {
+      filteredArray = filteredArray.filter((service) => {
+        return service.ratings == rating;
+      });
+    }
+
+    setServices(filteredArray);
   };
 
   return (
@@ -69,7 +112,7 @@ const Services = () => {
               </button>
             </div>
           </div>
-          {ServicesData.map((service) => {
+          {services.map((service, index) => {
             return !companyFlag ? (
               <ServiceCard key={service.id} service={service} flag="true" />
             ) : (

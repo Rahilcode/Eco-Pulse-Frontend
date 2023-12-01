@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service, flag, onDelete }) => {
+  // To implement star ratings
   const [rate, setRate] = useState([]);
   useEffect(() => {
     let newrate = [];
@@ -33,14 +34,12 @@ const ServiceCard = ({ service, flag, onDelete }) => {
                 </span>
               </h2>
             </div>
-
             <h5 className="card-text text-secondary">{service.companyName}</h5>
             <div className="d-flex gap-2">
               <h4>
                 <span className="badge bg-black"> {service.city}</span>
               </h4>
             </div>
-
             <div className="d-flex justify-content-between">
               <h4 className="card-text text-secondary service-type">
                 Type: {service.type}
@@ -66,6 +65,7 @@ const ServiceCard = ({ service, flag, onDelete }) => {
               )}
             </div>
 
+            {/* render the buttons based on the type of user */}
             {flag && (
               <div className="d-flex justify-content-between align-items-center">
                 <div>
